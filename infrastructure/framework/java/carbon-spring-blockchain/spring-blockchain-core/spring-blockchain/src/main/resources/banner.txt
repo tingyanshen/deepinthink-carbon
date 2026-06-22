@@ -9,7 +9,7 @@ ${AnsiColor.BRIGHT_GREEN}
       |_|                 |___/
 
 ${AnsiColor.BRIGHT_RED}
-Spring Boot Version: ${spring-boot.version}${carbon.spring-boot.formatted-version}
+Spring Boot Version: ${spring-boot.version}${spring-boot.formatted-version}
 Spring Amoeba Version: ${amoeba.spring-boot.version}${amoeba.spring-boot.formatted-version}
 Spring Blockchain Version: ${carbon.spring-blockchain.version}${carbon.spring-blockchain.formatted-version}
 ${AnsiColor.DEFAULT}
