@@ -40,5 +40,8 @@ jobs:
       - name: Build && Install carbon-specification-benchmark
         run: cd specification/benchmark/java/carbon-specification-benchmark && ./mvnw install -B
 
+      - name: Build && Install carbon-specification-component
+        run: cd specification/component/java/carbon-specification-component && ./mvnw install -B
+
       - name: Build && Install carbon-benchmark
         run: cd templates/benchmark/java/carbon-benchmark && ./mvnw install -B
