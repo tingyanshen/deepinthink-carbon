@@ -36,3 +36,6 @@ jobs:
 
       - name: Build && Install carbon-spring-blockchain
         run: cd infrastructure/framework/java/carbon-spring-blockchain && ./mvnw install -B
+
+      - name: Build && Install carbon-specification-benchmark
+        run: cd specification/benchmark/java/carbon-specification-benchmark && ./mvnw install -B
