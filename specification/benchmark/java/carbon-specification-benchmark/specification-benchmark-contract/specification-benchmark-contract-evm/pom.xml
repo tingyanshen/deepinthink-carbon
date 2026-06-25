@@ -42,6 +42,9 @@
               <include>**/*.sol</include>
             </includes>
           </soliditySourceFiles>
+          <pathPrefixes>
+            <pathPrefix>@openzeppelin/contracts=../../../thirdparty/openzeppelin-contracts/contracts</pathPrefix>
+          </pathPrefixes>
           <outputDirectory>
             <java>${project.basedir}/target/generated-sources/web3j/java</java>
             <bin>${project.basedir}/target/generated-sources/web3j/bin</bin>
