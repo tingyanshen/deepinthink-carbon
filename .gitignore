@@ -7,3 +7,5 @@ target/
 # Jetbrains IDEA
 .idea/
 *.iml
+!tools/ide-support/carbon-idea/.idea
+!tools/ide-support/carbon-idea/carbon-idea.iml
