@@ -5,16 +5,17 @@
     <groupId>org.deepinthink.carbon</groupId>
     <artifactId>specification-benchmark-parent</artifactId>
     <version>2026.5.0-SNAPSHOT</version>
-    <relativePath>specification-benchmark-parent/pom.xml</relativePath>
+    <relativePath>../specification-benchmark-parent/pom.xml</relativePath>
   </parent>
-  <artifactId>carbon-specification-benchmark</artifactId>
+  <artifactId>specification-benchmark-contract</artifactId>
   <packaging>pom</packaging>
   <modules>
-    <module>specification-benchmark-contract</module>
-    <module>specification-benchmark-dependencies</module>
-    <module>specification-benchmark-parent</module>
+    <module>specification-benchmark-contract-evm</module>
   </modules>
-  <properties>
-    <spotless.license-header.file>${project.basedir}/../../../../tools/configs/checkstyle/license-header.txt</spotless.license-header.file>
-  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>org.web3j</groupId>
+      <artifactId>core</artifactId>
+    </dependency>
+  </dependencies>
 </project>

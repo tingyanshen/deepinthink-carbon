@@ -10,4 +10,13 @@
   <groupId>org.deepinthink.carbon</groupId>
   <artifactId>specification-benchmark-dependencies</artifactId>
   <packaging>pom</packaging>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.deepinthink.carbon</groupId>
+        <artifactId>specification-benchmark-contract-evm</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 </project>

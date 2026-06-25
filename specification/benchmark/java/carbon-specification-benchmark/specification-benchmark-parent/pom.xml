@@ -12,6 +12,9 @@
   <packaging>pom</packaging>
   <properties>
     <amoeba.version>2026.5.0-SNAPSHOT</amoeba.version>
+    <web3j.version>4.13.0</web3j.version>
+    <solidity.version>0.8.20</solidity.version>
+    <build-helper-maven-plugin.version>3.6.1</build-helper-maven-plugin.version>
     <spotless.license-header.file>${project.basedir}/../../../../../tools/configs/checkstyle/license-header.txt</spotless.license-header.file>
   </properties>
   <dependencyManagement>
@@ -30,6 +33,31 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
+      <dependency>
+        <groupId>org.web3j</groupId>
+        <artifactId>core</artifactId>
+        <version>${web3j.version}</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>build-helper-maven-plugin</artifactId>
+          <version>${build-helper-maven-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.web3j</groupId>
+          <artifactId>web3j-maven-plugin</artifactId>
+          <version>${web3j.version}</version>
+          <configuration>
+            <solcVersion>${solidity.version}</solcVersion>
+            <outputFormat>java,abi,bin</outputFormat>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
 </project>
