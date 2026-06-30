@@ -16,7 +16,7 @@ jobs:
       - uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: '17'
+          java-version: '25'
           cache: 'maven'
 
       - name: Checkout deepinthink/amoeba
@@ -27,6 +27,9 @@ jobs:
 
       - name: Build && Install amoeba-maven
         run: cd deepinthink/amoeba/tools/buildtools/java/amoeba-maven && ./mvnw install -B
+
+      - name: Build && Install amoeba-specification-external
+        run: cd deepinthink/amoeba/specification/external/java/amoeba-specification-external && ./mvnw install -B
 
       - name: Build && Install amoeba-external
         run: cd deepinthink/amoeba/infrastructure/external/java/amoeba-external && ./mvnw install -B

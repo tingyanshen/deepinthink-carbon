@@ -6,9 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="spring-blockchain" />
         <module name="spring-blockchain-autoconfigure" />
         <module name="spring-blockchain-starter" />
+        <module name="spring-blockchain" />
+        <module name="specification-benchmark-contract-evm" />
       </profile>
     </annotationProcessing>
   </component>
