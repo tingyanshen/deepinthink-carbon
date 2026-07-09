@@ -16,8 +16,23 @@ jobs:
       - uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: '25'
+          java-version: |
+            21
+            25
           cache: 'maven'
+
+      - name: Checkout tingyanshen/LFDT-web3j-web3j-sokt
+        uses: actions/checkout@v4
+        with:
+          repository: tingyanshen/LFDT-web3j-web3j-sokt
+          ref: 'fix/release-0.6.0-releases-json'
+          path: tingyanshen/LFDT-web3j-web3j-sokt
+
+      - name: Build && Install LFDT-web3j-web3j-sokt
+        run: |
+          cd tingyanshen/LFDT-web3j-web3j-sokt
+          ./gradlew spotlessApply -Dorg.gradle.java.home=$JAVA_HOME_21_x64
+          ./gradlew build publishToMavenLocal -x test -Dorg.gradle.java.home=$JAVA_HOME_21_x64
 
       - name: Checkout deepinthink/amoeba
         uses: actions/checkout@v4
@@ -37,9 +52,14 @@ jobs:
       - name: Build && Install carbon-spring-blockchain
         run: cd infrastructure/framework/java/carbon-spring-blockchain && ./mvnw install -B
 
+      - name: Build && Install carbon-specification-benchmark
+        run: |
+          cd specification/benchmark/java/carbon-specification-benchmark
+          ./mvnw web3j:generate-sources --pl specification-benchmark-contract/specification-benchmark-contract-evm -X
+          ./mvnw install -B
+
       - name: Build && Install carbon-specification-component
         run: cd specification/component/java/carbon-specification-component && ./mvnw install -B
-
 
       - name: Build && Install carbon-spring-blockchain-component
         run: cd infrastructure/component/java/carbon-spring-blockchain-component && ./mvnw install -B
