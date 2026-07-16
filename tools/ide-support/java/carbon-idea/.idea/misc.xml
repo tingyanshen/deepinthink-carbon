@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/../../../../specification/benchmark/java/carbon-specification-benchmark/pom.xml" />
         <option value="$PROJECT_DIR$/../../../../infrastructure/framework/java/carbon-spring-blockchain/pom.xml" />
         <option value="$PROJECT_DIR$/../../../../infrastructure/component/java/carbon-spring-blockchain-component/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../initializr/java/carbon-initializr/pom.xml" />
       </list>
     </option>
   </component>
