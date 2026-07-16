@@ -6,11 +6,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="benchmark-chaincode-fabric" />
+        <module name="benchmark-evm-besu" />
+        <module name="benchmark-chaincode-core" />
         <module name="spring-blockchain-autoconfigure" />
+        <module name="benchmark-evm-core" />
         <module name="spring-blockchain-starter" />
         <module name="spring-blockchain" />
         <module name="specification-benchmark-contract-evm" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="benchmark-evm-bensu" target="25" />
+      <module name="carbon-initializr" target="25" />
+      <module name="initializr-dependencies" target="25" />
+      <module name="initializr-parent" target="25" />
+    </bytecodeTargetLevel>
   </component>
 </project>
