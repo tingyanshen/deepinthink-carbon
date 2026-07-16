@@ -66,3 +66,6 @@ jobs:
 
       - name: Build && Install carbon-benchmark
         run: cd templates/benchmark/java/carbon-benchmark && ./mvnw install -B
+
+      - name: Build && Install carbon-initializr
+        run: cd tools/initializr/java/carbon-initializr && ./mvnw install -B
