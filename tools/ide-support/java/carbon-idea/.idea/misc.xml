@@ -6,6 +6,8 @@
       <list>
         <option value="$PROJECT_DIR$/../../../../infrastructure/framework/java/carbon-spring-iot/pom.xml" />
         <option value="$PROJECT_DIR$/../../../../specification/iot/java/carbon-specification-iot/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../../specification/component/java/carbon-specification-component/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../../components/gateway/java/carbon-spring-iot-gateway/pom.xml" />
       </list>
     </option>
   </component>
