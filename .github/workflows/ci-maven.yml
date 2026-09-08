@@ -20,5 +20,8 @@ jobs:
       - name: Setup deepinthink/amoeba
         uses: deepinthink/amoeba/.github/actions/setup-amoeba/java@main
 
+      - name: Build && Install carbon-specification-iot
+        run: cd specification/iot/java/carbon-specification-iot && ./mvnw install -B
+
       - name: Build && Install carbon-spring-iot
         run: cd infrastructure/framework/java/carbon-spring-iot && ./mvnw install -B

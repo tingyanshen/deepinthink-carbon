@@ -3,12 +3,12 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>org.deepinthink.amoeba</groupId>
-    <artifactId>maven-springboot-parent</artifactId>
+    <artifactId>maven-parent</artifactId>
     <version>2026.5.0-SNAPSHOT</version>
     <relativePath/>
   </parent>
   <groupId>org.deepinthink.carbon</groupId>
-  <artifactId>spring-iot-parent</artifactId>
+  <artifactId>specification-iot-parent</artifactId>
   <packaging>pom</packaging>
   <properties>
     <amoeba.version>2026.5.0-SNAPSHOT</amoeba.version>
@@ -20,20 +20,6 @@
         <groupId>org.deepinthink.amoeba</groupId>
         <artifactId>external-dependencies</artifactId>
         <version>${amoeba.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.deepinthink.amoeba</groupId>
-        <artifactId>spring-boot-dependencies</artifactId>
-        <version>${amoeba.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.deepinthink.carbon</groupId>
-        <artifactId>spring-iot-dependencies</artifactId>
-        <version>${project.version}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
