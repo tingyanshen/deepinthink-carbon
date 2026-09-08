@@ -1,0 +1,21 @@
+name: Setup Carbon
+
+inputs:
+  ref:
+    description: 'The ref to checkout'
+    required: false
+    default: 'main'
+
+runs:
+  using: "composite"
+  steps:
+    - name: Checkout deepinthink/carbon
+      uses: actions/checkout@v4
+      with:
+        repository: deepinthink/carbon
+        path: deepinthink/carbon
+        ref: ${{ inputs.ref }}
+
+    - name: Build && Install carbon-spring-iot
+      shell: bash
+      run: cd deepinthink/carbon/infrastructure/framework/java/carbon-spring-iot && ./mvnw install -B
