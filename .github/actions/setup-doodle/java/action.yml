@@ -28,6 +28,15 @@ runs:
       shell: bash
       run: cd deepinthink/carbon/infrastructure/framework/java/carbon-spring-iot && ./mvnw install -B
 
+    - name: Build && Install carbon-spring-iot-benchmark
+      shell: bash
+      run: cd deepinthink/carbon/infrastructure/benchmark/java/carbon-spring-iot-benchmark && ./mvnw install -B
+
     - name: Build && Install carbon-spring-iot-gateway
       shell: bash
       run: cd deepinthink/carbon/components/gateway/java/carbon-spring-iot-gateway && ./mvnw install -B
+
+    - name: Build && Install carbon-benchmark
+      shell: bash
+      run: cd deepinthink/carbon/templates/benchmark/java/carbon-benchmark && ./mvnw install -B
+
