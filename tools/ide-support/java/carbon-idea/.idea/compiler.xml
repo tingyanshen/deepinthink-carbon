@@ -6,13 +6,25 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="spring-iot-autoconfigure" />
-        <module name="spring-iot" />
         <module name="spring-iot-starter" />
+        <module name="spring-iot-component-gateway-server" />
+        <module name="spring-iot-autoconfigure" />
+        <module name="spring-iot-starter-component-gateway-server" />
+        <module name="spring-iot" />
+        <module name="spring-iot-component-gateway-admin-vaadin" />
+        <module name="spring-iot-component-gateway-client" />
+        <module name="spring-iot-starter-component-gateway-admin-server" />
+        <module name="spring-iot-component-gateway-admin-server" />
+        <module name="spring-iot-starter-component-gateway-admin-vaadin" />
+        <module name="spring-iot-starter-component-gateway-client" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="carbon-spring-iot-gateway" target="25" />
       <module name="doodle-spring-iot" target="25" />
+      <module name="spring-iot-gateway-dependencies" target="25" />
+      <module name="spring-iot-gateway-parent" target="25" />
+      <module name="spring-iot-gateway-starters" target="25" />
     </bytecodeTargetLevel>
   </component>
 </project>

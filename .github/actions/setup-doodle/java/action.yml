@@ -34,7 +34,7 @@ runs:
 
     - name: Build && Install carbon-spring-iot-gateway
       shell: bash
-      run: cd deepinthink/carbon/components/gateway/java/carbon-spring-iot-gateway && ./mvnw install -B
+      run: cd deepinthink/carbon/components/gateway/java/carbon-spring-iot-component-gateway && ./mvnw install -B
 
     - name: Build && Install carbon-benchmark
       shell: bash

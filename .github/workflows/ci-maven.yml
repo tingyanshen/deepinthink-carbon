@@ -32,8 +32,8 @@ jobs:
       - name: Build && Install carbon-spring-iot-benchmark
         run: cd infrastructure/benchmark/java/carbon-spring-iot-benchmark && ./mvnw install -B
 
-      - name: Build && Install carbon-spring-iot-gateway
-        run: cd components/gateway/java/carbon-spring-iot-gateway && ./mvnw install -B
+      - name: Build && Install carbon-spring-iot-component-gateway
+        run: cd components/gateway/java/carbon-spring-iot-component-gateway && ./mvnw install -B
 
       - name: Build && Install carbon-benchmark
         run: cd templates/benchmark/java/carbon-benchmark && ./mvnw install -B
